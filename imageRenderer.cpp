@@ -10,6 +10,7 @@ void print_lum_chars(Terminal t) {
 
     // search for char with closest luminance and print it
     for(int i = 0; i < t.height; i++)
+    {
         for(int j = 0; j < t.width; j++)
         {   
             double luminance = t.getLuminance(i, j);
@@ -19,6 +20,8 @@ void print_lum_chars(Terminal t) {
 
             std::cout << asciiChars[ix];
         }
+        std::cout << "\n";
+    }
 }
 
 void renderImage(cv::String &filepath) {
